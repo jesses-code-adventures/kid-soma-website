@@ -1,0 +1,21 @@
+---
+export interface TStem {
+    layout: string,
+    song: string,
+    description?: string,
+    downloadURL: string,
+    image?: string | null
+}
+
+export interface Props {
+    stem: TStem
+}
+
+const {stem} = Astro.props
+---
+<a class="flex flex-col justify-evenly hover:dark:bg-gray-800 hover:bg-gray-200 pt-6 pb-6" href={stem.downloadURL}>
+    <div class="flex flex-col text-left">
+        <h1>{stem.song}</h1>
+        {stem.description ? <div class="dark:text-gray-300 text-gray-700">{stem.description}</div>: null}
+    </div>
+</a>

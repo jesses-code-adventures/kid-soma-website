@@ -2,7 +2,6 @@
 layout: ../../components/ShowPageLayout.astro
 date: 2022-11-02
 title: kid soma @ the lansdowne
-# slug: show/kid-soma-lansdowne-2022-11
 shortDescription: with brendon moon, roze burke
 body: this will be lovely night of sad music and ketamine
 createdDate: 2022-10-01

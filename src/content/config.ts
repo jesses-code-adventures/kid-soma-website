@@ -21,7 +21,7 @@ export const collections = {
             song: z.string(),
             description: z.string().optional(),
             downloadURL: z.string().url(),
-            image: z.string().optional()
+            image: z.string().optional().nullable()
         })
     })
 }
