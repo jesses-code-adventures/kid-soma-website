@@ -19,12 +19,12 @@ const { title, description } = Astro.props;
 		{description ? <meta name='description' content={description} />: null}
 		<title>{title}</title>
 	</head>
-	<Header />
 	<body>
-		<slot />
-	</body>
+	<Header />
+	<slot />
 	<div class="h-12" />
 	<Footer />
+	</body>
 </html>
 <style is:global>
 	:root {
