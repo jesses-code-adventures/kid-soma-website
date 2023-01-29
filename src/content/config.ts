@@ -1,6 +1,6 @@
 import {z, defineCollection} from 'astro:content';
 
-const collections = {
+export const collections = {
     'show': defineCollection({
         schema: z.object({
             layout: z.string(),
@@ -13,6 +13,15 @@ const collections = {
             ticketURL: z.string().url().optional(),
             headerImage: z.string().optional(),
             featureImage: z.string().optional()
+        })
+    }),
+    'stem': defineCollection({
+        schema: z.object({
+            layout: z.string(),
+            song: z.string(),
+            description: z.string().optional(),
+            downloadURL: z.string().url(),
+            image: z.string().optional()
         })
     })
 }
