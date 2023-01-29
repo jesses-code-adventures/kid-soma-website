@@ -1,0 +1,10 @@
+---
+import ShowComponent from "./ShowComponent.astro";
+import { getCollection, getEntryBySlug } from "astro:content";
+import { TShow } from "./ShowComponent.astro";
+const shows = await getCollection('show')
+
+---
+<div class="w-8/12 m-auto pt-8">
+    {shows.map((show) => <ShowComponent show={show.data}/>)}
+</div>

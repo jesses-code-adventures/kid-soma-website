@@ -1,0 +1,16 @@
+---
+export interface Props {
+    title: string,
+    embedURL: string,
+}
+
+const {title, embedURL} = Astro.props
+---
+<div class="flex flex-col">
+<h2 class="text-3xl font-extrabold text-center pt-12">{title}</h2>
+<iframe 
+width="420" height="315" class="m-auto pt-8" 
+src={embedURL} title={title} 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+allowfullscreen loading="lazy"/>
+</div>

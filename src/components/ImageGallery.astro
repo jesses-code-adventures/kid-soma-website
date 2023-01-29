@@ -1,0 +1,32 @@
+---
+import { Image } from '@astrojs/image/components'
+import type { defaultErrorMap } from 'astro/zod'
+
+export interface TImageData {
+    url: string,
+    alt: string,
+    width: number,
+    height: number
+}
+
+// export interface Props {
+//     images: Array<TImageData>
+// }
+
+// const {images} = Astro.props
+
+const squareImages = await Astro.glob("../images/square/*")
+const portraitImages = await Astro.glob("../images/portrait/*")
+const landscapeImages = await Astro.glob("../images/landscape/*")
+
+const allImages = squareImages.concat(portraitImages.concat(landscapeImages))
+
+---
+<div class="pt-8 justify-items-center grid lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 md:grid-cols-2 sm:grid-cols-1 w-8/12 m-auto">{allImages.map(
+    (meta) => 
+    <Image loading="lazy" alt={meta.default.src} width={320} height={320} src={meta.default.src}/>)}
+</div>
+
+
+<!-- src={meta.default.src} width={meta.default.width} 
+    height={meta.default.height} alt={meta.default.src} -->

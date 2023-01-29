@@ -1,0 +1,58 @@
+---
+export interface TShow {
+    layout: string,
+    date: Date,
+    title: string,
+    slug: string,
+    shortDescription: string,
+    body?: string,
+    createdDate: Date,
+    eventURL?: string,
+    ticketURL?: string,
+    draft: boolean,
+    headerImage: string,
+    featureImage: string
+}
+
+export interface Props {
+    show: TShow
+}
+
+interface IntToString {
+    [key: number]: string
+}
+
+const days: IntToString = {
+    1: "Monday",
+    2: "Tuesday",
+    3: "Wednesday",
+    4: "Thursday",
+    5: "Friday",
+    6: "Saturday",
+    7: "Sunday",
+}
+
+const months: IntToString = {
+    1: "January",
+    2: "February",
+    3: "March",
+    4: "April",
+    5: "May",
+    6: "June",
+    7: "July",
+    8: "August",
+    9: "September",
+    10: "October",
+    11: "November",
+    12: "December"
+}
+
+const {show} = Astro.props
+---
+<a class="flex flex-row justify-evenly hover:dark:bg-gray-800 hover:bg-gray-200" href={show.slug}>
+    <div class="flex flex-col text-left">
+        <h1>{show.title}</h1>
+        <div class="dark:text-gray-300 text-gray-700">{show.shortDescription}</div>
+    </div>
+    <div class="text-right">{`${days[show.date.getDay()]} ${show.date.getDate()} ${months[show.date.getMonth()]} ${show.date.getFullYear()}`}</div>
+</a>
