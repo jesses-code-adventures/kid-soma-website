@@ -7,6 +7,12 @@ import tailwind from "@astrojs/tailwind";
 import image from "@astrojs/image";
 
 // https://astro.build/config
+import robotsTxt from "astro-robots-txt";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), image({serviceEntryPoint: '@astrojs/image/sharp'})]
+  site: "https://kid-soma-website.vercel.app/",
+  integrations: [tailwind(), image({
+    serviceEntryPoint: '@astrojs/image/sharp'
+  }), robotsTxt()]
 });
