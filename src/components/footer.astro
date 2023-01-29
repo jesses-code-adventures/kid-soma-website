@@ -6,7 +6,7 @@ import { SiteMetadata } from '../config';
 
 <div class="h-24 lg:h-16"></div>
 <footer class="text-gray-600 dark:text-gray-400">
-  <div class="fixed z-20 bottom-0 inset-x-0 px-4 lg:px-8 py-1 w-full flex items-center lg:flex-row flex-col border-t-2 border-gray-300 dark:border-gray-600 dark:bg-black bg-[#F6F6F6] " >
+  <div class="fixed z-20 bottom-0 inset-x-0 px-4 lg:px-8 py-1 w-full flex items-center flex-col border-t-2 border-gray-300 dark:border-gray-600 dark:bg-black bg-[#F6F6F6] " >
     <span class="flex-none flex flex-row items-center">
       <!-- <a class="flex title-font font-medium items-center lg:justify-start justify-center text-gray-900 dark:text:gray-100" href={import.meta.env.BASE_URL} >
         <SVGImg src={Logo} alt="Footer Logo" class="dark:bg-gray-100 h-6 w-6" />
@@ -25,21 +25,21 @@ import { SiteMetadata } from '../config';
       </p>
     </span>
     <span class="flex-none flex flex-row items-center">
-      <p class="text-sm text-gray-600 dark:text-gray-300 lg:ml-4 lg:pl-4 lg:border-l-2 lg:border-purple-300 dark:lg:border-purple-600 lg:py-1"
+      <p class="text-sm text-gray-600 dark:text-gray-300 lg:ml-4 lg:pl-4 lg:border-l-2 lg:border-gray-300 dark:lg:border-gray-300 lg:py-1"
       >
         <a
           href={import.meta.env.BASE_URL + 'privacy'}
-          class="ml-1 text-purple-600 hover:text-pink-600 dark:text-purple-300 dark:hover:text-pink-300"
+          class="ml-1 text-gray-600 hover:text-gray-300 dark:text-gray-300 dark:hover:text-gray-600"
         >
           Privacy Policy
         </a>
       </p>
       <p
-        class="text-sm text-gray-600 ml-4 pl-4 border-l-2 border-purple-300 py-1"
+        class="text-sm text-gray-600 ml-4 pl-4 border-l-2 border-gray-300 py-1"
       >
         <a
           href={import.meta.env.BASE_URL + 'rss.xml'}
-          class="ml-1 text-purple-600 hover:text-pink-600 dark:text-purple-300 dark:hover:text-pink-300"
+          class="ml-1 text-gray-600 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-300"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -47,27 +47,29 @@ import { SiteMetadata } from '../config';
         </a>
       </p>
       <p
-        class="text-sm text-gray-600 dark:text-gray-300 ml-4 pl-4 border-l-2 border-purple-300 py-1"
+        class="text-sm text-gray-600 dark:text-gray-300 ml-4 pl-4 border-l-2 border-gray-300 py-1"
       >
         <a
           href={import.meta.env.BASE_URL + 'sitemap-index.xml'}
-          class="ml-1 text-purple-600 hover:text-pink-600 dark:text-purple-300 dark:hover:text-pink-300"
+          class="ml-1 text-gray-600 hover:text-gray-300 dark:text-gray-300 dark:hover:text-gray-600"
           rel="noopener noreferrer"
           target="_blank"
         >
           Sitemap
         </a>
       </p>
-    </span>
-    <span
-      class="grow inline-flex lg:ml-auto justify-center lg:justify-end mt-2 lg:mt-0"
+      <p
+        class="text-sm text-gray-600 dark:text-gray-300 ml-4 pl-4 border-l-2 border-gray-300"
+      >
+      <span
+      class="grow inline-flex justify-center mt-2 lg:mt-0"
     >
       {
         SiteMetadata.social.map(s =>
           s.link ? (
             <a
               href={s.link}
-              class="ml-3 text-purple-600 hover:text-pink-600 dark:text-purple-300 dark:hover:text-pink-300"
+              class="ml-3 text-gray-600 hover:text-gray-300 dark:text-gray-300 dark:hover:text-gray-600"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -79,6 +81,8 @@ import { SiteMetadata } from '../config';
           )
         )
       }
+    </span>
+  </p>
     </span>
   </div>
 </footer>
