@@ -1,0 +1,6 @@
+---
+import { NavigationLinks } from "../config";
+---
+<div class="flex mb-2 border-b-2 pt-16">
+    {NavigationLinks.map((link) => <a class="pr-4 pl-4 text-right font-semibold hover:dark:bg-white hover:dark:text-black hover:bg-black hover:text-white" href={link.href}>{link.name}</a>)}
+</div>
