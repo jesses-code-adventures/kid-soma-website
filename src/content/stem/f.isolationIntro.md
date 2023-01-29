@@ -1,5 +1,5 @@
 ---
-layout: ../../components/StemComponentLayout.astro
+layout: ../../components/StemComponent.astro
 song: isolation intro
 description: the calm
 downloadURL: https://www.stems.com/

@@ -1,5 +1,5 @@
 ---
-layout: ../../components/StemComponentLayout.astro
+layout: ../../components/StemComponent.astro
 song: 4am, doin ok
 description: we got hope left
 downloadURL: https://www.stems.com/

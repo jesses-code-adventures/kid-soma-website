@@ -1,5 +1,5 @@
 ---
-layout: ../../components/StemComponentLayout.astro
+layout: ../../components/StemComponent.astro
 song: recovery time
 description: sing along if u know the words
 downloadURL: https://www.stems.com/

@@ -1,5 +1,5 @@
 ---
-layout: ../../components/StemComponentLayout.astro
+layout: ../../components/StemComponent.astro
 song: isolation
 description: the storm
 downloadURL: https://www.stems.com/

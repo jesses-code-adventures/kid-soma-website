@@ -1,5 +1,5 @@
 ---
-layout: ../../components/StemComponentLayout.astro
+layout: ../../components/StemComponent.astro
 song: closing time
 description: piano battle!
 downloadURL: https://www.stems.com/

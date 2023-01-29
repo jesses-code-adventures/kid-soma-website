@@ -1,5 +1,5 @@
 ---
-layout: ../../components/StemComponentLayout.astro
+layout: ../../components/StemComponent.astro
 song: gutters
 description: the hit single
 downloadURL: https://www.stems.com/
