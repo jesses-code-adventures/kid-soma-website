@@ -3,8 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import ShowsComponent from '../components/ShowsComponent.astro';
 import VideosEmbed from '../components/VideosEmbed.astro';
 import ImageGallery from '../components/ImageGallery.astro';
----
 
+export const prerender = true;
+
+---
 <Layout title="kid soma" description="the world of kid soma, an electronic/ambient music producer from sydney.">
 	<main>
 		<div class="h-screen">

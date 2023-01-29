@@ -23,5 +23,12 @@ export const collections = {
             downloadURL: z.string().url(),
             image: z.string().optional().nullable()
         })
+    }),
+    'lyric': defineCollection({
+        schema: z.object({
+            layout: z.string(),
+            song: z.string(),
+            // lyrics: z.string()
+        })
     })
 }

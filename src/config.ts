@@ -1,6 +1,7 @@
 export const NavigationLinks = [
     { name: "home", href: '/'},
     { name: "stems", href: 'stems'},
+    { name: "lyrics", href: 'lyrics'},
     { name: "podcast", href: 'podcast'},
     { name: "contact", href: 'contact'},
 ]

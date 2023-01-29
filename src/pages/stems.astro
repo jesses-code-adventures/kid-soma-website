@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import StemComponent from '../components/StemComponent.astro';
 
+export const prerender = true;
+
 const stems = await getCollection('stem')
 ---
 <Layout title="stems" description="download free stems by kid soma">

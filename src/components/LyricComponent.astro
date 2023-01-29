@@ -1,0 +1,22 @@
+---
+export interface TLyric {
+    layout: string,
+    song: string,
+    // lyrics: string
+}
+
+export interface Props {
+    lyric: TLyric
+}
+
+import LyricDisplay from './LyricDisplay.astro';
+
+const {lyric} = Astro.props
+---
+<a class="flex flex-col justify-evenly hover:dark:bg-gray-800 hover:bg-gray-200 pt-6 pb-6" >
+    <div class="flex flex-col text-left">
+        <h1>{lyric.song}</h1>
+        <LyricDisplay lyric={lyric} />
+        <!-- <div class="dark:text-gray-300 text-gray-700">{lyric.lyrics}</div> -->
+    </div>
+</a>
