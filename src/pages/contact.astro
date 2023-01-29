@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="kid soma">
+	<main>
+		<div class="h-screen pr-24 pl-24">
+			<h2 class="text-3xl font-extrabold text-center pt-12">contact</h2>
+            <form class="flex flex-col">
+                <input id="name" type="text" class="pb-8 dark:bg-black dark:placeholder-white" placeholder="name" required />
+                <input id="email" type="email" class="pb-8 dark:bg-black dark:placeholder-white" placeholder="email" required />
+                <h3>contact reason</h3>
+                <div>
+                    <input type="radio" id="gig" name="contactReason" value='gig' checked>
+                    <label for="gig" class="pl-2">i want kid soma to play my show</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="music collab" name="contactReason" value='music collab'>
+                    <label for="music collab" class="pl-2">i want to make music together</label><br>
+                </div>
+                <div>
+                    <input type="radio" id="production services" name="contactReason" value='production services'>
+                    <label for="production services" class="pl-2">i need a producer</label><br>
+                </div>
+                <div class="pb-8">
+                    <input type="radio" id="fan mail" name="contactReason" value='fan mail'>
+                    <label for="fan mail" class="pl-2">i just like the music</label><br>
+                </div>
+                <textarea id="message" name="message" placeholder="write your message" class="pb-8 dark:bg-black dark:placeholder-white" required/>
+                <button id="submit" class="submit-contact w-full hover:dark:bg-white hover:dark:text-black hover:text-white hover:bg-black" type="submit">submit</button>
+            </form>
+		</div>
+	</main>
+</Layout>
+
+<script>
+    const name = document.getElementById('name')
+    const email = document.getElementById('email')
+    const contactReason = document.getElementsByName('contactReason')
+    const message = document.getElementById('message')
+    const button = document.getElementById("submit")
+    button?.addEventListener('click', () => 
+        alert(`${(name as HTMLInputElement).value} ${(email as HTMLInputElement).value} ${(contactReason[0] as HTMLInputElement).value} ${(message as HTMLInputElement).value}`)
+    )
+</script>
