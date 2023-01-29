@@ -1,13 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="kid soma">
+<Layout title="contact">
 	<main>
 		<div class="h-screen pr-24 pl-24">
-			<h2 class="text-3xl font-extrabold text-center pt-12">contact</h2>
+			<h2 class="text-3xl font-extrabold text-center pt-12 pb-12">contact</h2>
             <form class="flex flex-col">
-                <input id="name" type="text" class="pb-8 dark:bg-black dark:placeholder-white" placeholder="name" required />
-                <input id="email" type="email" class="pb-8 dark:bg-black dark:placeholder-white" placeholder="email" required />
+                <input id="name" type="text" class="pb-8 dark:bg-black dark:placeholder-white bg-[#F6F6F6]" placeholder="name" required />
+                <input id="email" type="email" class="pb-8 dark:bg-black dark:placeholder-white bg-[#F6F6F6]" placeholder="email" required />
                 <h3>contact reason</h3>
                 <div>
                     <input type="radio" id="gig" name="contactReason" value='gig' checked>
@@ -25,7 +25,7 @@ import Layout from '../layouts/Layout.astro';
                     <input type="radio" id="fan mail" name="contactReason" value='fan mail'>
                     <label for="fan mail" class="pl-2">i just like the music</label><br>
                 </div>
-                <textarea id="message" name="message" placeholder="write your message" class="pb-8 dark:bg-black dark:placeholder-white" required/>
+                <textarea id="message" name="message" placeholder="write your message" class="pb-8 dark:bg-black dark:placeholder-white bg-[#F6F6F6]" required/>
                 <button id="submit" class="submit-contact w-full hover:dark:bg-white hover:dark:text-black hover:text-white hover:bg-black" type="submit">submit</button>
             </form>
 		</div>
