@@ -10,9 +10,12 @@ import image from "@astrojs/image";
 import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
+import sitemap from "@astrojs/sitemap";
+
+// https://astro.build/config
 export default defineConfig({
   site: "https://kid-soma-website.vercel.app/",
   integrations: [tailwind(), image({
     serviceEntryPoint: '@astrojs/image/sharp'
-  }), robotsTxt()]
+  }), robotsTxt(), sitemap()]
 });
