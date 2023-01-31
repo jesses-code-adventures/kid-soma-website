@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import SampleComponent from '../components/SampleComponent.astro';
+
+export const prerender = true;
+
+const samples = await getCollection('sample')
+---
+<Layout title="samples" description="download free samples from kid soma.">
+	<main>
+		<div class="h-screen pr-12 pl-12">
+			<h1 class="text-3xl pl-24 pt-12 font-extrabold">samples</h1>
+            <div class="pt-8 pb-8">take our samples, do whatever you like and send us what you make!</div>
+            <div class="pl-8 pr-8">
+                {samples.map((sample) => <SampleComponent sample={sample.data}/>)}
+            </div>
+		</div>
+	</main>
+</Layout>
